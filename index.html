@@ -14,14 +14,13 @@
 <body>
     <div id="app">
         <header>
-            <h1 class="center">ToDoList</h1>
+            <h1 class="center">NotToDoList</h1>
         </header>
 
         <main>
             <div class="list">
                 <ul class="todolist center">
-                    <li class="drag-el" v-for="(item,index) in todolist" :key="item.title" draggable
-                        @dragstart="startDrag($event, item)">
+                    <li class="list-item" v-for="(item,index) in todolist" :key="index">
                         <span :class="(item.done==true) ? 'line': '' "
                             @click="lineToggle(index)">{{item.content}}</span>
                         <div>

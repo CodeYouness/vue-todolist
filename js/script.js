@@ -55,17 +55,6 @@ createApp({
                 this.todolist[index].content = newTask
 
             }
-        },
-        startDrag(evt, item) {
-            evt.dataTransfer.dropEffect = 'move'
-            evt.dataTransfer.effectAllowed = 'move'
-            evt.dataTransfer.setData('itemID', item.id)
-        },
-
-        onDrop(evt, list) {
-            const itemID = evt.dataTransfer.getData('itemID')
-            const item = this.todolist.find((item) => item.id == itemID)
-            item.list = list
-        },
+        }
     }
 }).mount('#app')
