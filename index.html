@@ -9,6 +9,28 @@
 </head>
 
 <body>
+    <div id="app">
+        <header>
+            <h1 class="center">ToDoList</h1>
+        </header>
+
+        <main>
+            <div class="list">
+                <ul class="todolist center">
+                    <li class="list-item" v-for="(item,index) in todolist" :key="index"
+                        :class="(item.done === true) ? 'line': ''" ;>
+                        {{item.content}}
+                    </li>
+                </ul>
+            </div>
+
+            <div class="form center">
+                <input type="text">
+                <button>Add Task</button>
+            </div>
+        </main>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

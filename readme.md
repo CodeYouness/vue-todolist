@@ -13,3 +13,7 @@ Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul p
 ### Bonus:
 1. - cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 2. -  aggiungere un altro bottone che permetta la modifica di un task gia' esistente
+
+# Human-Code
+- Creo una lista di oggetti
+- ripeto un elemento 
