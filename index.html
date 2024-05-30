@@ -20,7 +20,8 @@
         <main>
             <div class="list">
                 <ul class="todolist center">
-                    <li class="list-item" v-for="(item,index) in todolist" :key="index">
+                    <li class="drag-el" v-for="(item,index) in todolist" :key="item.title" draggable
+                        @dragstart="startDrag($event, item)">
                         <span :class="(item.done==true) ? 'line': '' "
                             @click="lineToggle(index)">{{item.content}}</span>
                         <div>
