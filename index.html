@@ -23,7 +23,10 @@
                     <li class="list-item" v-for="(item,index) in todolist" :key="index">
                         <span :class="(item.done==true) ? 'line': '' "
                             @click="lineToggle(index)">{{item.content}}</span>
-                        <i class="fa-solid fa-dumpster" @click="removeTask(index)"></i>
+                        <div>
+                            <i class="fa-regular fa-pen-to-square" @click="overWriteTask(index)"></i>
+                            <i class="fa-solid fa-dumpster" @click="removeTask(index)"></i>
+                        </div>
                     </li>
                 </ul>
             </div>

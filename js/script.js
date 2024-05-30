@@ -33,10 +33,15 @@ createApp({
                 'content': '',
                 'done': false
             }
-
-            newTask.content = newContent
+            if (newContent.length >= 1)
+                newTask.content = newContent
             this.todolist.push(newTask)
             this.insertText = ''
+        },
+
+        overWriteTask: function (index) {
+            const newTask = prompt('overwrite the task: ' + this.todolist[index].content)
+            this.todolist[index].content = newTask
         }
     }
 }).mount('#app')

@@ -19,6 +19,14 @@ li {
     margin: 0 auto;
 }
 
-i:hover {
+i:last-child:hover {
     color: red;
+}
+
+i:first-child:hover {
+    color: blue;
+}
+
+i {
+    margin-right: 1rem;
 }
