@@ -18,6 +18,9 @@ createApp({
         }
     },
     methods: {
-        next: function () { }
+        lineToggle: function (indexPosition) {
+            this.todolist[indexPosition].done = !this.todolist[indexPosition].done
+        }
     }
+
 }).mount('#app')

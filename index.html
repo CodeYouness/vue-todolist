@@ -18,7 +18,7 @@
             <div class="list">
                 <ul class="todolist center">
                     <li class="list-item" v-for="(item,index) in todolist" :key="index"
-                        :class="(item.done === true) ? 'line': ''" ;>
+                        :class="(item.done==true) ? 'line': '' " @click="lineToggle(index)">
                         {{item.content}}
                     </li>
                 </ul>
@@ -30,6 +30,7 @@
             </div>
         </main>
     </div>
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/script.js"></script>
 </body>
