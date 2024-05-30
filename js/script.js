@@ -18,9 +18,21 @@ createApp({
         }
     },
     methods: {
+
         lineToggle: function (indexPosition) {
             this.todolist[indexPosition].done = !this.todolist[indexPosition].done
+        },
+
+        removeTask: function (elementIndex) {
+            this.todolist.splice(elementIndex, 1)
+        },
+
+        addTask: function () {
+            const newTask = {
+                'content': '',
+                'done': false
+            }
+
         }
     }
-
 }).mount('#app')
