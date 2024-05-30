@@ -14,7 +14,8 @@ createApp({
             {
                 'content': 'cipolle',
                 'done': false
-            }]
+            }],
+            insertText: ''
         }
     },
     methods: {
@@ -27,12 +28,15 @@ createApp({
             this.todolist.splice(elementIndex, 1)
         },
 
-        addTask: function () {
+        addTask: function (newContent) {
             const newTask = {
                 'content': '',
                 'done': false
             }
 
+            newTask.content = newContent
+            this.todolist.push(newTask)
+            this.insertText = ''
         }
     }
 }).mount('#app')

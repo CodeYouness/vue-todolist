@@ -29,7 +29,7 @@
             </div>
 
             <div class="form center">
-                <input type="text">
+                <input type="text" v-model="insertText" @keyup.enter="addTask(insertText)">
                 <button>Add Task</button>
             </div>
         </main>
